@@ -32,7 +32,7 @@ window.scrollTo(0,0)
       const handleDelete=()=>{
         swal({
           title: "Are you sure?",
-          text: "Once deleted, you will not be able to recover this imaginary file!",
+          text: "Once deleted, you will not be able to recover this Post",
           icon: "warning",
           buttons: true,
           dangerMode: true,
@@ -85,11 +85,13 @@ window.scrollTo(0,0)
         {user&&(
         <i 
         onClick={()=>{dispatch(postLikeToggle(post?._id))
+          window.location.reload()
         }}
         className={post?.likes?.includes(user?._id)
-          ?"bi bi-hand-thumbs-up-fill"
-          :"bi bi-hand-thumbs-up"
+          ?"fa-solid fa-thumbs-up mx-2"
+          :"fa-regular fa-thumbs-up mx-2"
         }
+      
         ></i>
         )}
         <small>{post?.likes?.length} likes</small>
@@ -99,9 +101,14 @@ window.scrollTo(0,0)
       <div>
         <i
           onClick={()=>setupdatePost(true)}
-          className="bi bi-pencil-square"
+          className=" fa-solid fa-square-pen"
+          style={{color:'#44484e'}} 
         ></i>
-        <i  className="bi bi-trash-fill" onClick={handleDelete}></i>
+        <i  
+        className="fa-solid fa-trash mx-2"
+        style={{color:" #dd0e0e"}}
+        onClick={handleDelete}></i>
+        
       </div>:""}
     </div>
     {user? <AddComment postId={post?._id}/> :
@@ -109,7 +116,7 @@ window.scrollTo(0,0)
     }
     
     {updatePostState&&<UpdatePost setupdatePost={setupdatePost} post={post}/>}
-<CommentList comments={post?.comments} />
+<CommentList comments={post?.comments} postId={post?._id} />
   </div>
   )
 }

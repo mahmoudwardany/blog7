@@ -32,7 +32,7 @@ useEffect(()=>{
             See all users
           </Link>
           <div className="admin-card-icon">
-            <i className="bi bi-person"></i>
+            <i className="fa-solid fa-person"></i>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ useEffect(()=>{
             See all posts
           </Link>
           <div className="admin-card-icon">
-            <i className="bi bi-file-post"></i>
+            <i className="fa-solid fa-file"></i>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ useEffect(()=>{
             See all categories
           </Link>
           <div className="admin-card-icon">
-            <i className="bi bi-tag-fill"></i>
+            <i className="fa-solid fa-tag"></i>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@ useEffect(()=>{
             See all comments
           </Link>
           <div className="admin-card-icon">
-            <i className="bi bi-chat-left-text"></i>
+            <i className="fa-solid fa-comments"></i>
           </div>
         </div>
       </div>

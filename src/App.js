@@ -36,10 +36,10 @@ function App() {
         {path:"",element:<Home/>},
         //admin
         {path:"admin",element:user?.isAdmin ?<AdminDashboard/> : <Navigate to={'/'}/>},
-        {path:"admin/users", element:user?.isAdmin ? <Users/> : <Navigate to={'/'}/>},
-        {path:"admin/posts", element:user?.isAdmin ? <PostsTable/> : <Navigate to={'/'}/>},
-        {path:"admin/categories", element:user?.isAdmin ?<CategoriesTable/>: <Navigate to={'/'}/>},
-        {path:"admin/comments",element:user?.isAdmin ? <CommentsTable/>: <Navigate to={'/'}/>},
+        {path:"dashboard/admin/users", element:user?.isAdmin ? <Users/> : <Navigate to={'/'}/>},
+        {path:"dashboard/admin/posts", element:user?.isAdmin ? <PostsTable/> : <Navigate to={'/'}/>},
+        {path:"dashboard/admin/categories", element:user?.isAdmin ?<CategoriesTable/>: <Navigate to={'/'}/>},
+        {path:"dashboard/admin/comments",element:user?.isAdmin ? <CommentsTable/>: <Navigate to={'/'}/>},
 
         //user
         {path:"/posts/create",element:user ?<CreatePost/> : <Navigate to={'/'}/>},

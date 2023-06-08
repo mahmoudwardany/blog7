@@ -24,7 +24,7 @@ useEffect(()=>{
       <abbr title="close">
         <i
           onClick={() => setupdatePost(false)}
-          className="bi bi-x-circle-fill update-post-form-close"
+          className="fa-regular fa-xmar update-post-form-close"
         ></i>
       </abbr>
       <h1 className="update-post-title">Update Post</h1>

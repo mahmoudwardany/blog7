@@ -46,7 +46,6 @@ export const updateComments = (commentId,newComment) => {
             })
             
             dispatch(postAction.updateComment(data))
-            dispatch(postAction.clearLoading())
 
         } catch (error) {
             toast.error(error.response.data.message)
